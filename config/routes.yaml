@@ -5,8 +5,8 @@ cse_account_index:
 
 _account:
     prefix: /account
-    resource: 'routes/account/main.yml'
+    resource: 'routes/_account/main.yml'
 
 _web_localized:
-    resource: 'routes/web/main.yml'
+    resource: 'routes/_web/main.yml'
     type: localized
