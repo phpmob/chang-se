@@ -2,6 +2,7 @@
 ###> symfony/framework-bundle ###
 /.env
 /public/bundles/
+/public/build/
 /var/
 /vendor/
 ###< symfony/framework-bundle ###
@@ -14,3 +15,8 @@
 ###> symfony/web-server-bundle ###
 /.web-server-pid
 ###< symfony/web-server-bundle ###
+
+node_modules/
+/bin/*
+!/bin/console
+!/bin/phpunit

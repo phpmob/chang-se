@@ -1,0 +1,7 @@
+cse_web_index:
+    path: /
+    defaults:
+        _controller: Chang\Standard\Controller\WebController::indexAction
+
+_security:
+    resource: '_security.yml'

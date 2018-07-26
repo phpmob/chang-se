@@ -1,0 +1,8 @@
+{
+  "namespaces": [
+    {
+      "namespace": "chang",
+      "path": "vendor/phpmob/chang/Application/Resources/views"
+    }
+  ]
+}

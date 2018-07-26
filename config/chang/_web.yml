@@ -1,0 +1,17 @@
+parameters:
+    chang_page_context_web:
+        site:
+            url: /
+        menus:
+            account:
+                profile:
+                    label: chang.ui.profile
+                    icon: far fa-user
+                change_password:
+                    label: chang.ui.change_password
+                    icon: fas fa-key
+                divider: { divider: true }
+                logout:
+                    label: chang.ui.logout
+                    route: cse_web_logout
+                    icon: fas fa-sign-out-alt

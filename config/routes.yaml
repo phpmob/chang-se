@@ -1,3 +1,12 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+cse_account_index:
+    path: /account
+    defaults:
+        _controller: Chang\Standard\Controller\AccountController::indexAction
+
+_account:
+    prefix: /account
+    resource: 'routes/account/main.yml'
+
+_web_localized:
+    resource: 'routes/web/main.yml'
+    type: localized

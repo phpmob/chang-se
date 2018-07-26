@@ -1,0 +1,4 @@
+{% set favicon = ctx_page.get('site.favicon')|default(asset('favicon.ico')) %}
+{% set icon = ctx_page.get('site.icon')|default(asset('icon.png')) %}
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ icon }}">
+<link rel="shortcut icon" href="{{ favicon }}">
