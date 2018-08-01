@@ -1,6 +1,14 @@
 {
+    "name": "phpmob/chang-se",
     "type": "project",
-    "license": "proprietary",
+    "homepage": "http://github.com/phpmob/chang-se",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ishmael Doss",
+            "email": "nukboon@gmail.com"
+        }
+    ],
     "repositories": [
         {
             "type": "vcs",
@@ -82,6 +90,9 @@
     "extra": {
         "symfony": {
             "allow-contrib": false
+        },
+        "branch-alias": {
+            "dev-master": "1.0-dev"
         }
     }
 }
