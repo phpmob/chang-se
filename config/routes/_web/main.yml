@@ -3,5 +3,12 @@ cse_web_index:
     defaults:
         _controller: Chang\Standard\Controller\WebController::indexAction
 
+cse_web_flashs:
+    path: /flashes
+    methods: [GET]
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template: web/flashes.html.twig
+
 _security:
     resource: '_security.yml'

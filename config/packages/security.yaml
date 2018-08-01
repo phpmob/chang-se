@@ -2,7 +2,7 @@ parameters:
     cse.security.regex_admin: "^/staff"
     cse.security.regex_root: "^/staff/root"
     cse.security.regex_api: "^/api/v[1-9]+"
-    cse.security.regex_web: "^/(?!staff|api/.*|api$|media/.*)[^/]++"
+    cse.security.regex_web: "^"
 
 security:
     providers:
@@ -106,7 +106,7 @@ security:
         - { path: "%cse.security.regex_admin%", role: ROLE_ADMIN }
         #- { path: "%cse.security.regex_api%/.*", role: ROLE_API }
 
-        #- { path: "^/account", role: ROLE_USER }
+        - { path: "^/account", role: ROLE_USER }
 
     role_hierarchy:
         ROLE_ADMIN: [ROLE_ADMINISTRATION_ACCESS]

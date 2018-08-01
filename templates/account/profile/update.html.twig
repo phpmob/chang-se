@@ -1,0 +1,53 @@
+{% extends 'account/profile/layout.html.twig' %}
+{% form_theme form 'account/profile/formTheme.html.twig' %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-lg-3">
+            {% include 'account/profile/_menu.html.twig' with { active: 'profile' } %}
+        </div>
+        <div class="col-lg-9">
+            {%- block raw -%}
+                {{ form_start(form, { method: 'PATCH', ajax: path('cse_account_profile_update') }) }}
+                <div class="card card-fluid">
+                    <h6 class="card-header">{{ 'chang.ui.update_profile'|trans }}</h6>
+                    <div class="card-body">
+
+                        {{ form_errors(form) }}
+
+                        <div class="media mb-4 align-items-center">
+                            <div class="user-avatar user-avatar-xl fileinput-button">
+                                <div class="fileinput-button-label">Change photo</div>
+                                <img id="{{ form.picture.file.vars.id }}"
+                                     src="{{ resource.picture|phpmob_imagine('80x80') }}" alt="User Avatar">
+                                <input type="file" name="{{ form.picture.file.vars.full_name }}"
+                                       accept="image/*"
+                                       data-preview="#{{ form.picture.file.vars.id }}">
+                            </div>
+                            <div class="media-body pl-3">
+                                <h3 class="card-title">Public avatar</h3>
+                                <h6 class="card-subtitle text-muted">Click the current avatar to change your photo.</h6>
+                                <p class="card-text">
+                                    <small>JPG, GIF or PNG 400x400, < 2 MB.</small>
+                                </p>
+                                {{ form_errors(form.picture.file) }}
+                            </div>
+                        </div>
+
+                        {{ form_row(form.firstName) }}
+                        {{ form_row(form.lastName) }}
+                        {{ form_row(form.gender) }}
+                        {{ form_row(form.localeCode) }}
+                    </div>
+                    <div class="card-footer p-2 justify-content-end">
+                        <button type="submit" class="btn btn-lg btn-success">
+                            {{ 'chang.ui.save_changes'|trans }}
+                        </button>
+                    </div>
+                </div>
+                {{ form_widget(form._token) }}
+                {{ form_end(form, { render_rest: false }) }}
+            {%- endblock -%}
+        </div>
+    </div>
+{% endblock %}

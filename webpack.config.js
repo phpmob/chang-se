@@ -2,8 +2,8 @@ const Encore = require('@symfony/webpack-encore');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const path = require('path');
 const Chang = {
-    base: path.resolve(__dirname, 'vendor/phpmob/chang/Application/Resources/private'),
-    messenger: path.resolve(__dirname, 'vendor/phpmob/chang/Messenger/Resources/private'),
+    base: path.resolve(__dirname, 'vendor/phpmob/chang/src/Application/Resources/private'),
+    messenger: path.resolve(__dirname, 'vendor/phpmob/chang/src/Messenger/Resources/private'),
 };
 
 Encore
@@ -60,6 +60,7 @@ Encore
     .addStyleEntry('account/style', './private/account/scss/app.scss')
 
     .addPlugin(new CopyWebpackPlugin([
+        { from: `./private/img/**`, to: 'img', flatten: true },
         { from: `${Chang.base}/img/**`, to: 'img', flatten: true },
         { from: `${Chang.messenger}/web-push/**`, to: 'web-push', flatten: true },
         { from: `${Chang.messenger}/sounds/**`, to: 'sounds', flatten: true },

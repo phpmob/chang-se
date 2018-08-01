@@ -5,8 +5,10 @@ require('popper.js');
 require('bootstrap');
 require('jquery-confirm');
 
+require('chang/js/data-preview');
 require('chang/js/data-href');
 require('chang/js/data-ajax-href');
+require('chang/js/data-ajax-form');
 require('chang/js/data-select-href');
 require('chang/js/data-form-filter');
 require('chang/js/data-toggle-display');

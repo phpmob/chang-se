@@ -1,0 +1,48 @@
+cse_account_profile_update:
+    path: /update
+    methods: [GET, PATCH]
+    defaults:
+        _controller: sylius.controller.web_user::updateAction
+        _sylius:
+            template: account/profile/update.html.twig
+            form:
+                type: Chang\Web\Form\Type\WebUserType
+                options:
+                    check_picture_error: false
+                    validation_groups: [cse_profile_update]
+
+            repository:
+                method: find
+                arguments: [ 'expr:service("cse.context.page").getUser()' ]
+            redirect:
+                route: cse_account_profile_update
+                parameters: {}
+
+cse_account_account_update:
+    path: /account
+    methods: [GET, PATCH]
+    defaults:
+        _controller: sylius.controller.web_user::changeAction
+        _sylius:
+            template: account/profile/account.html.twig
+            form: Chang\User\Form\Type\ChangeUserType
+            redirect:
+                route: cse_account_account_update
+                parameters: {}
+
+cse_account_change_password:
+    path: /change-password
+    methods: [GET, PUT]
+    defaults:
+        _controller: sylius.controller.web_user::changePasswordAction
+        _sylius:
+            redirect: cse_account_profile_update
+            template: account/profile/changePassword.html.twig
+
+cse_account_request_email_verification_token:
+    path: /verify
+    methods: [POST]
+    defaults:
+        _controller: sylius.controller.web_user:requestVerificationTokenAction
+        _follow_redirect: true
+        _sylius: { redirect: cse_web_flashs }

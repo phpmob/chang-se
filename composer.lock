@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "1674cc9aca8d7a315100f725e2a825c2",
+    "content-hash": "6b387eff713ba255c7c4c7fe2020d9ab",
     "packages": [
         {
             "name": "adbario/php-dot-notation",
@@ -2370,6 +2370,61 @@
                 "image processing"
             ],
             "time": "2017-05-16T10:31:22+00:00"
+        },
+        {
+            "name": "incenteev/translation-checker-bundle",
+            "version": "v1.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Incenteev/translation-checker-bundle.git",
+                "reference": "9a7d7002283ada1eaf22f9eceb3681e29a71304a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Incenteev/translation-checker-bundle/zipball/9a7d7002283ada1eaf22f9eceb3681e29a71304a",
+                "reference": "9a7d7002283ada1eaf22f9eceb3681e29a71304a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "symfony/console": "^2.8 || ^3.0 || ^4.0",
+                "symfony/finder": "^2.8 || ^3.0 || ^4.0",
+                "symfony/framework-bundle": "^2.8 || ^3.0 || ^4.0",
+                "symfony/translation": "^2.8 || ^3.0 || ^4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.2",
+                "symfony/phpunit-bridge": "^4.0",
+                "symfony/yaml": "^2.8 || ^3.0 || ^4.0"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.4.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Incenteev\\TranslationCheckerBundle\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christophe Coevoet",
+                    "email": "stof@notk.org"
+                }
+            ],
+            "description": "CLI tools to check translations in a Symfony project",
+            "homepage": "https://github.com/Incenteev/IncenteevTranslationCheckerBundle",
+            "keywords": [
+                "translation",
+                "translation check"
+            ],
+            "time": "2018-02-20T13:37:05+00:00"
         },
         {
             "name": "jackalope/jackalope",
@@ -4781,12 +4836,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpmob/chang.git",
-                "reference": "1fc3416d3e09d8f344a10a3b79f479c124838719"
+                "reference": "298f79d506200a7d32054d286e8128721a898e98"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpmob/chang/zipball/1fc3416d3e09d8f344a10a3b79f479c124838719",
-                "reference": "1fc3416d3e09d8f344a10a3b79f479c124838719",
+                "url": "https://api.github.com/repos/phpmob/chang/zipball/298f79d506200a7d32054d286e8128721a898e98",
+                "reference": "298f79d506200a7d32054d286e8128721a898e98",
                 "shasum": ""
             },
             "require": {
@@ -4814,7 +4869,8 @@
             },
             "require-dev": {
                 "phpspec/phpspec": "^4.0",
-                "phpunit/phpunit": "^5.6"
+                "phpunit/phpunit": "^5.6",
+                "symfony/symfony": "^4.1"
             },
             "bin": [
                 "chang"
@@ -4827,10 +4883,9 @@
             },
             "autoload": {
                 "psr-4": {
-                    "Chang\\": ""
+                    "Chang\\": "src"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -4842,20 +4897,24 @@
             ],
             "description": "Symfony 4 Bundler.",
             "homepage": "http://github.com/phpmob/chang",
-            "time": "2018-07-26T14:42:04+00:00"
+            "support": {
+                "source": "https://github.com/phpmob/chang/tree/master",
+                "issues": "https://github.com/phpmob/chang/issues"
+            },
+            "time": "2018-07-28T20:38:24+00:00"
         },
         {
             "name": "phpmob/media-bundle",
-            "version": "1.0",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpmob/media-bundle.git",
-                "reference": "e5c497da0b8bdebe64232454962784922be150f0"
+                "reference": "88fdcf9f00dfe107882a3a60feb748811604620d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpmob/media-bundle/zipball/e5c497da0b8bdebe64232454962784922be150f0",
-                "reference": "e5c497da0b8bdebe64232454962784922be150f0",
+                "url": "https://api.github.com/repos/phpmob/media-bundle/zipball/88fdcf9f00dfe107882a3a60feb748811604620d",
+                "reference": "88fdcf9f00dfe107882a3a60feb748811604620d",
                 "shasum": ""
             },
             "require": {
@@ -4897,7 +4956,7 @@
             "license": [
                 "MIT"
             ],
-            "time": "2018-06-17T12:37:59+00:00"
+            "time": "2018-07-26T18:34:59+00:00"
         },
         {
             "name": "phpmob/settings",
@@ -5871,7 +5930,7 @@
         },
         {
             "name": "sylius/fixtures-bundle",
-            "version": "v1.2.3",
+            "version": "v1.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Sylius/SyliusFixturesBundle.git",
@@ -5948,7 +6007,7 @@
         },
         {
             "name": "sylius/grid",
-            "version": "v1.2.3",
+            "version": "v1.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Sylius/Grid.git",
@@ -6014,7 +6073,7 @@
         },
         {
             "name": "sylius/grid-bundle",
-            "version": "v1.2.3",
+            "version": "v1.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Sylius/SyliusGridBundle.git",
@@ -6102,7 +6161,7 @@
         },
         {
             "name": "sylius/locale",
-            "version": "v1.2.3",
+            "version": "v1.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Sylius/Locale.git",
@@ -6165,7 +6224,7 @@
         },
         {
             "name": "sylius/locale-bundle",
-            "version": "v1.2.3",
+            "version": "v1.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Sylius/SyliusLocaleBundle.git",
@@ -6239,7 +6298,7 @@
         },
         {
             "name": "sylius/mailer",
-            "version": "v1.2.3",
+            "version": "v1.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Sylius/Mailer.git",
@@ -6298,7 +6357,7 @@
         },
         {
             "name": "sylius/mailer-bundle",
-            "version": "v1.2.3",
+            "version": "v1.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Sylius/SyliusMailerBundle.git",
@@ -6365,7 +6424,7 @@
         },
         {
             "name": "sylius/registry",
-            "version": "v1.2.3",
+            "version": "v1.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Sylius/Registry.git",
@@ -6424,7 +6483,7 @@
         },
         {
             "name": "sylius/resource",
-            "version": "v1.2.3",
+            "version": "v1.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Sylius/Resource.git",
@@ -6495,7 +6554,7 @@
         },
         {
             "name": "sylius/resource-bundle",
-            "version": "v1.2.3",
+            "version": "v1.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Sylius/SyliusResourceBundle.git",
@@ -6588,7 +6647,7 @@
         },
         {
             "name": "sylius/user",
-            "version": "v1.2.3",
+            "version": "v1.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Sylius/User.git",
@@ -6662,16 +6721,16 @@
         },
         {
             "name": "sylius/user-bundle",
-            "version": "v1.2.3",
+            "version": "v1.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Sylius/SyliusUserBundle.git",
-                "reference": "1523fa86de684751dfe29b956454df1ab5940069"
+                "reference": "854b6f1e51a25493e6a831f955b7fcc02e04d62f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Sylius/SyliusUserBundle/zipball/1523fa86de684751dfe29b956454df1ab5940069",
-                "reference": "1523fa86de684751dfe29b956454df1ab5940069",
+                "url": "https://api.github.com/repos/Sylius/SyliusUserBundle/zipball/854b6f1e51a25493e6a831f955b7fcc02e04d62f",
+                "reference": "854b6f1e51a25493e6a831f955b7fcc02e04d62f",
                 "shasum": ""
             },
             "require": {
@@ -6747,7 +6806,7 @@
                 "registration",
                 "user"
             ],
-            "time": "2018-07-04T18:47:53+00:00"
+            "time": "2018-07-11T09:15:22+00:00"
         },
         {
             "name": "symfony/amqp-pack",
@@ -7454,16 +7513,16 @@
         },
         {
             "name": "symfony/flex",
-            "version": "v1.0.85",
+            "version": "v1.0.88",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/flex.git",
-                "reference": "48bf0eddadb004f95f6875b533ff1fb234bfc3f4"
+                "reference": "730ff18ed2d15ed8a0eaba8115a0cffdf53c39eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/flex/zipball/48bf0eddadb004f95f6875b533ff1fb234bfc3f4",
-                "reference": "48bf0eddadb004f95f6875b533ff1fb234bfc3f4",
+                "url": "https://api.github.com/repos/symfony/flex/zipball/730ff18ed2d15ed8a0eaba8115a0cffdf53c39eb",
+                "reference": "730ff18ed2d15ed8a0eaba8115a0cffdf53c39eb",
                 "shasum": ""
             },
             "require": {
@@ -7497,7 +7556,7 @@
                 }
             ],
             "description": "Composer plugin for Symfony",
-            "time": "2018-07-25T09:16:52+00:00"
+            "time": "2018-07-27T16:55:54+00:00"
         },
         {
             "name": "symfony/form",
@@ -9941,24 +10000,24 @@
         },
         {
             "name": "twig/extensions",
-            "version": "v1.5.1",
+            "version": "v1.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig-extensions.git",
-                "reference": "d188c76168b853481cc75879ea045bf93d718e9c"
+                "reference": "2c1a86526d0044065220d1b51ac08348bea5ca82"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig-extensions/zipball/d188c76168b853481cc75879ea045bf93d718e9c",
-                "reference": "d188c76168b853481cc75879ea045bf93d718e9c",
+                "url": "https://api.github.com/repos/twigphp/Twig-extensions/zipball/2c1a86526d0044065220d1b51ac08348bea5ca82",
+                "reference": "2c1a86526d0044065220d1b51ac08348bea5ca82",
                 "shasum": ""
             },
             "require": {
-                "twig/twig": "~1.27|~2.0"
+                "twig/twig": "^1.27|^2.0"
             },
             "require-dev": {
-                "symfony/phpunit-bridge": "~3.3@dev",
-                "symfony/translation": "~2.3|~3.0"
+                "symfony/phpunit-bridge": "^3.4",
+                "symfony/translation": "^2.7|^3.4"
             },
             "suggest": {
                 "symfony/translation": "Allow the time_diff output to be translated"
@@ -9988,12 +10047,11 @@
                 }
             ],
             "description": "Common additional features for Twig that do not directly belong in core",
-            "homepage": "http://twig.sensiolabs.org/doc/extensions/index.html",
             "keywords": [
                 "i18n",
                 "text"
             ],
-            "time": "2017-06-08T18:19:53+00:00"
+            "time": "2018-05-22T13:26:07+00:00"
         },
         {
             "name": "twig/twig",
@@ -11406,16 +11464,16 @@
     "packages-dev": [
         {
             "name": "easycorp/easy-log-handler",
-            "version": "v1.0.5",
+            "version": "v1.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EasyCorp/easy-log-handler.git",
-                "reference": "21c442f5d08b6761a6fa7653e08a5525fb4ccd2b"
+                "reference": "5f95717248d20684f88cfb878d8bf3d78aadcbba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EasyCorp/easy-log-handler/zipball/21c442f5d08b6761a6fa7653e08a5525fb4ccd2b",
-                "reference": "21c442f5d08b6761a6fa7653e08a5525fb4ccd2b",
+                "url": "https://api.github.com/repos/EasyCorp/easy-log-handler/zipball/5f95717248d20684f88cfb878d8bf3d78aadcbba",
+                "reference": "5f95717248d20684f88cfb878d8bf3d78aadcbba",
                 "shasum": ""
             },
             "require": {
@@ -11452,7 +11510,7 @@
                 "monolog",
                 "productivity"
             ],
-            "time": "2018-06-12T06:27:09+00:00"
+            "time": "2018-07-27T15:41:37+00:00"
         },
         {
             "name": "nikic/php-parser",

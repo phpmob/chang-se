@@ -16,6 +16,10 @@
 /.web-server-pid
 ###< symfony/web-server-bundle ###
 
+###> phpmob/media-bundle ###
+/public/media/
+###< phpmob/media-bundle ###
+
 node_modules/
 /bin/*
 !/bin/console

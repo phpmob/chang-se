@@ -11,6 +11,6 @@
 @import "components";
 @import "@chang/sass/overrides/all";
 
-body {
+html, body {
   background-color: $body-bg;
 }

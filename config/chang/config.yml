@@ -1,6 +1,7 @@
 chang:
     driver: doctrine/orm
     packages:
+        Ajax: true
         Messenger: true
         Context: true
 #        Currency:
@@ -11,8 +12,7 @@ chang:
         DataFixture: true
         DoctrineExtension:
             mysql: true
-        Exception:
-            redirect: true
+        Exception: true
         ExpressionLanguage: true
         Form:
             convertRaw: true
@@ -33,9 +33,14 @@ chang:
                             - dos
 #        SequenceNumber: true
         Twig: true
-        User: true
+        User:
+            full:
+                options:
+                    verify_email_change:
+                        enabled: true
         Admin: true
         Web: true
+        Validator: true
 #        Verification:
 #            phoneNumber:
 #                options:

@@ -5,6 +5,9 @@
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: 'en'
+    sylius.form.type.user_change_password.validation_groups:
+        - sylius
+        - chang_user
 
 services:
     # default configuration for services in *this* file
@@ -38,6 +41,7 @@ services:
 
     cse.context.page:
         class: Chang\Standard\Context\PageContext
+        public: true
         arguments:
             - '@chang.context.page'
             - { admin: '@chang.context.admin_context', web: '@chang.context.web_context' }
