@@ -1,0 +1,64 @@
+.menu-main {
+  background: #fff;
+  border-right: 1px solid #e5e5e5;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  overflow: visible;
+  transition: transform 0.3s;
+  z-index: 1000;
+  &-inner {
+    height: 100%;
+    position: relative;
+    margin: 7px 0;
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      height: 65px;
+      position: relative;
+      width: 100%;
+
+      i {
+        position: relative;
+        font-size: 1.5rem;
+        color: #A9ABAC;
+      }
+      &.is-active i, &:hover i {
+        color: $secondary;
+      }
+    }
+    .main-logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 32px;
+        height: 32px;
+        margin-top: -5px;
+        transition: opacity 0.3s;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+  &.is-dark {
+    background: #344258;
+    border-right: 1px solid #344258;
+    ul li a {
+      color: #fff;
+    }
+    li {
+      i {
+        color: #fff;
+      }
+      &.is-active i, &:hover i {
+        color: $primary;
+      }
+    }
+  }
+}

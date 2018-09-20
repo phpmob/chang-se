@@ -1,0 +1,17 @@
+@import "variables/common";
+@import "variables/bulma";
+@import "variables/sl";
+@import "~bulma/bulma";
+@import "~simple-line-icons/scss/simple-line-icons";
+@import "animations";
+@import "menu/main";
+@import "menu/child";
+@import "menu/wrapper";
+
+html, body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  overflow: hidden !important;
+  background-color: #f4f6fb;
+  margin: 0 !important;
+  height: 100% !important;
+}

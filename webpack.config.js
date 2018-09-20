@@ -59,8 +59,12 @@ Encore
     .addEntry('account/app', './private/account/js/app.js')
     .addStyleEntry('account/style', './private/account/scss/app.scss')
 
+    // bulma
+    .addEntry('bulma/app', './private/bulma/js/app.js')
+    .addStyleEntry('bulma/style', './private/bulma/scss/app.scss')
+
     .addPlugin(new CopyWebpackPlugin([
-        { from: `./private/img/**`, to: 'img', flatten: true },
+        //{ from: `./private/img/**`, to: 'img', flatten: true },
         { from: `${Chang.base}/img/**`, to: 'img', flatten: true },
         { from: `${Chang.messenger}/web-push/**`, to: 'web-push', flatten: true },
         { from: `${Chang.messenger}/sounds/**`, to: 'sounds', flatten: true },

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Roboto" rel="stylesheet">
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('build/bulma/style.css') }}">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+    {% endblock %}
+</head>
+<body>
+{% block body %}{% endblock %}
+{% block javascripts %}
+    <script src="{{ asset('build/bulma/app.js') }}"></script>
+{% endblock %}
+</body>
+</html>

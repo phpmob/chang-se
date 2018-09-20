@@ -11,6 +11,6 @@ class WebController extends Controller
 {
     public function indexAction(): Response
     {
-        return $this->render('web/index.html.twig');
+        return $this->render('bulma/index.html.twig');
     }
 }
