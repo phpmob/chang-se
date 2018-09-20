@@ -5,11 +5,16 @@
   top: 0;
   bottom: 0;
   transform: translateX(-251px);
-  left: 80px;
   width: 250px;
   overflow: hidden;
   transition: all .3s;
   z-index: 999;
+  left: $main-menu-width;
+
+  @include mobile() {
+    left: $main-menu-width - 20px;
+  }
+
   &-inner {
     height: 100%;
     ul li {

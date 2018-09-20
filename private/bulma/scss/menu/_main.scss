@@ -5,14 +5,18 @@
   top: 0;
   bottom: 0;
   left: 0;
-  width: 80px;
   overflow: visible;
   transition: transform 0.3s;
   z-index: 1000;
+  width: $main-menu-width;
+
+  @include mobile() {
+    width: $main-menu-width - 20px;
+  }
+
   &-inner {
     height: 100%;
     position: relative;
-    margin: 7px 0;
     li {
       display: flex;
       align-items: center;
