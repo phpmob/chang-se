@@ -28,11 +28,10 @@
                     </div>
 
                     <aside class="menu">
-                        <ul class="menu-list">
-                            <li><a>Update Profile</a></li>
-                            <li><a>Change Password</a></li>
-                            <li><a>Logout</a></li>
-                        </ul>
+                        <div class="menu-list">
+                            <a><i class="material-icons">perm_identity</i> Update Profile</a>
+                            <a><i class="material-icons">vpn_key</i> Change Password</a>
+                        </div>
                     </aside>
                 </div>
 
@@ -183,7 +182,13 @@
     </div>
     <!-- /Quickview body -->
 
-    <!-- Quickview footer -->
-    <footer class="aside-footer"></footer>
-    <!-- /Quickview footer -->
+    <footer class="aside-footer">
+        <a href="/"
+           data-confirmation="You are going to logout. Are you sure?"
+           data-confirmation-theme="supervan"
+           data-confirmation-icon="fas fa-sign-out-alt"
+        >
+            <i class="material-icons">arrow_forward</i> {{ 'chang.ui.logout'|trans }}
+        </a>
+    </footer>
 </aside>

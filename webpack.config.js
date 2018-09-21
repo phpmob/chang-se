@@ -60,8 +60,8 @@ Encore
     .addStyleEntry('account/style', './private/account/scss/app.scss')
 
     // bulma
-    .addEntry('bulma/app', './private/bulma/js/app.js')
-    .addStyleEntry('bulma/style', './private/bulma/scss/app.scss')
+    .addEntry('bulma/app', './private/bulma/app.js')
+    .addStyleEntry('bulma/style', './private/bulma/app.scss')
 
     .addPlugin(new CopyWebpackPlugin([
         //{ from: `./private/img/**`, to: 'img', flatten: true },

@@ -111,4 +111,13 @@
       cursor: pointer;
     }
   }
+
+  a {
+    display: flex;
+    align-items: center;
+
+    i {
+      margin-right: 1rem;
+    }
+  }
 }
