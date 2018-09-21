@@ -3,3 +3,7 @@ window.$ = window.jQuery = require('jquery');
 require('jquery-confirm');
 
 require('./menu/stack');
+require('./dismiss');
+require('./tabs');
+require('./toggle');
+require('./tooltip');

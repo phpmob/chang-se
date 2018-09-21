@@ -3,12 +3,17 @@
 @import "variables/sl";
 @import "~bulma/bulma";
 @import "~simple-line-icons/scss/simple-line-icons";
+@import "utils";
 @import "animations";
+@import "breadcrumb";
+@import "navbar";
+@import "tabs";
+@import "switch";
+@import "btn";
+@import "aside/main";
 @import "menu/main";
 @import "menu/child";
 @import "menu/wrapper";
-@import "breadcrumb";
-@import "navbar";
 
 html, body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -16,6 +21,38 @@ html, body {
   background-color: #f4f6fb;
   margin: 0 !important;
   height: 100% !important;
+}
+
+.no-touch .scrollable.hover {
+  overflow-y: hidden
+}
+
+.no-touch .scrollable.hover:hover {
+  overflow-y: auto;
+  overflow: visible
+}
+
+a {
+  color: $secondary
+}
+
+a:hover {
+  color: $special;
+  text-decoration: none
+}
+
+a:focus {
+  text-decoration: none
+}
+
+nav {
+  user-select: none
+}
+
+nav ul, nav li {
+  outline: 0;
+  margin: 0;
+  padding: 0
 }
 
 .body-wrapper {
