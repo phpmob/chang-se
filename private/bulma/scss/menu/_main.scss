@@ -48,6 +48,14 @@
           opacity: 0.8;
         }
       }
+      .material-icons {
+        font-size: 3rem;
+        transition: opacity 0.3s;
+        color: $primary;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
     }
   }
   &.is-dark {
