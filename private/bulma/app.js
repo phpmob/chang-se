@@ -5,7 +5,9 @@ require('jquery-confirm');
 
 require('./js/jconfirm');
 require('./js/menu/stack');
+require('./js/modal');
 require('./js/dismiss');
 require('./js/tabs');
 require('./js/toggle');
 require('./js/tooltip');
+require('./js/ripple');

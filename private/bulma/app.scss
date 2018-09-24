@@ -4,13 +4,16 @@
 @import "~bulma/bulma";
 @import "~simple-line-icons/scss/simple-line-icons";
 @import "scss/utils";
+@import "scss/helpers";
 @import "scss/animations";
 @import "scss/breadcrumb";
 @import "scss/navbar";
 @import "scss/tabs";
 @import "scss/switch";
 @import "scss/btn";
+@import "scss/flex-card";
 @import "scss/jconfirm";
+@import "scss/modal";
 @import "scss/aside/main";
 @import "scss/menu/main";
 @import "scss/menu/child";
@@ -38,7 +41,7 @@ a {
 }
 
 a:hover {
-  color: $special;
+  color: $info;
   text-decoration: none
 }
 
