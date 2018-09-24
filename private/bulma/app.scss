@@ -65,7 +65,7 @@ button, a {
   outline: none;
 }
 
-body {
+body.has-stack-menu {
   > .container {
     padding-left: $main-menu-width;
 

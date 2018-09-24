@@ -1,5 +1,51 @@
-{% extends 'web/layout.html.twig' %}
+{% extends 'bulma/layout.html.twig' %}
 
 {% block body %}
-    {% include '@chang/security/login.html.twig' %}
+    <section class="hero is-fullheight is-light-grey is-bold">
+        <div class="hero-body">
+            <div class="container">
+                <div class="columns is-vcentered">
+                    <div class="column is-4 is-offset-4">
+                        <form action="{{ path('cse_admin_login_check') }}" method="post">
+                            <div class="flex-card is-light-raised light-bordered card-overflow">
+                                <div class="card-body">
+                                    {% if last_error %}
+                                        <div class="notification is-danger">
+                                            {{ last_error.messageKey|trans(last_error.messageData, 'security') }}
+                                        </div>
+                                    {% endif %}
+                                    <div class="field pb-10">
+                                        <div class="control has-icons-right">
+                                            <input class="input is-large" type="text" placeholder="Username">
+                                            <span class="icon is-medium is-right">
+                                                    <i class="ico-user"></i>
+                                                </span>
+                                        </div>
+                                    </div>
+                                    <div class="field pb-10">
+                                        <div class="control has-icons-right">
+                                            <input class="input is-large" type="text" placeholder="Password">
+                                            <span class="icon is-medium is-right">
+                                                    <i class="ico-lock"></i>
+                                                </span>
+                                        </div>
+                                    </div>
+                                    <div class="pt-10 pb-10">
+                                        <button class="button button-cta btn-align primary-btn is-fullwidth rounded no-lh">
+                                            Login
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <p class="has-text-centered">
+                            <a class="no-account" href="#">Dont have an account?</a>
+                            |
+                            <a class="forgot" href="#">Forgot password?</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 {% endblock %}

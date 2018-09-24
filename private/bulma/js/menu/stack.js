@@ -1,4 +1,14 @@
 (function ($) {
+    let $mainMenu;
+
+    $(function () {
+        $mainMenu = $('.menu-main');
+
+        if ($mainMenu.length) {
+            $('body').addClass('has-stack-menu');
+        }
+    });
+
     $(document).on('click', '[data-menu-child]', function (e) {
         e.preventDefault();
 
@@ -44,7 +54,6 @@
     $(document).on('click', '.menu-wrapper', function (e) {
         e.preventDefault();
 
-        const $mainMenu = $('.menu-main');
         const $me = $(this);
 
         $me.find('.icon-box-toggle').removeClass('active');
