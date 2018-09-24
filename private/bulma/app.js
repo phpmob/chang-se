@@ -3,9 +3,12 @@ window.$ = window.jQuery = require('jquery');
 
 require('jquery-confirm');
 
+require('chang/js/data-ajax-form');
+
 require('./js/jconfirm');
 require('./js/menu/stack');
 require('./js/modal');
+require('./js/modal-href');
 require('./js/dismiss');
 require('./js/tabs');
 require('./js/toggle');

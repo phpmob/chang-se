@@ -11,8 +11,10 @@
 @import "scss/tabs";
 @import "scss/switch";
 @import "scss/btn";
+@import "scss/content";
 @import "scss/flex-card";
 @import "scss/jconfirm";
+@import "scss/loading.io";
 @import "scss/modal";
 @import "scss/aside/main";
 @import "scss/menu/main";
@@ -63,10 +65,12 @@ button, a {
   outline: none;
 }
 
-.body-wrapper {
-  padding-left: $main-menu-width;
+body {
+  > .container {
+    padding-left: $main-menu-width;
 
-  @include mobile() {
-    padding-left: $main-menu-width - 20px;
+    @include mobile() {
+      padding-left: $main-menu-width - 20px;
+    }
   }
 }

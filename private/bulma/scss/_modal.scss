@@ -7,6 +7,11 @@
     transform: scale(0);
     opacity: 0;
     z-index: 99 !important;
+
+    > h2 {
+      color: #fff;
+      font-size: $size-large;
+    }
   }
   .modal-close {
     transition: all 0.4s;
@@ -58,14 +63,22 @@
       }
     }
     .modal-card {
+      z-index: 99 !important;
+
       .modal-card-head, .modal-card-foot {
         padding: 15px;
       }
+
       .modal-card-head {
         background-color: #fff;
+        border: none;
+
         p {
           color: $grey-dark;
+          text-align: center;
+
         }
+
         .delete {
           background: transparent !important;
           transition: all 0.3s;

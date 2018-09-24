@@ -17,9 +17,11 @@
         if ($effect.length || $effect2.length) {
             setTimeout(function () {
                 $modal.removeClass('is-active');
+                $modal.remove();
             }, 300);
         } else {
             $modal.removeClass('is-active');
+            $modal.remove();
         }
     });
 })(jQuery);

@@ -1,7 +1,7 @@
 $(document).on('click', '[data-confirmation]', function (e) {
     e.preventDefault();
 
-    var $el = $(this);
+    const $el = $(this);
 
     let btnClass = 'btn-green';
     let icon = 'far fa-question-circle';
@@ -17,6 +17,15 @@ $(document).on('click', '[data-confirmation]', function (e) {
             break;
     }
 
+    const isForm = $el.is('form');
+
+    if (isForm) {
+        $el.find('button,.btn')
+            .addClass('disabled')
+            .attr('disabled', true)
+        ;
+    }
+
     $.confirm({
         icon: $el.data('confirmation-icon') || icon,
         theme: $el.data('confirmation-theme') || 'modern',
@@ -30,6 +39,13 @@ $(document).on('click', '[data-confirmation]', function (e) {
                 action: function (e) {
                     $el.addClass('disabled');
 
+                    if (isForm) {
+                        const ajaxForm = require('chang/js/ajax-form');
+                        ajaxForm.submit($el.get(0), e);
+
+                        return;
+                    }
+
                     if ($el.is('a')) {
                         window.location.href = $el.attr('href');
                     } else {
@@ -39,7 +55,15 @@ $(document).on('click', '[data-confirmation]', function (e) {
             },
             cancel: {
                 keys: ['esc'],
-                text: 'No'
+                text: 'No',
+                action: function () {
+                    if (isForm) {
+                        $el.find('button,.btn')
+                            .removeClass('disabled')
+                            .attr('disabled', false)
+                        ;
+                    }
+                }
             }
         }
     });
