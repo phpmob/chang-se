@@ -9,7 +9,6 @@
   },
   "dependencies": {
     "bootstrap": "^4.1.1",
-    "bulma": "^0.7.1",
     "flag-icon-css": "^3.0.0",
     "flatpickr": "^4.5.0",
     "howler": "^2.0.13",
@@ -25,7 +24,6 @@
     "simple-line-icons": "^2.4.1",
     "socket.io-client": "^2.1.1",
     "stacked-menu": "https://gitlab.com/bent10/stacked-menu.git",
-    "tippy.js": "^2.6.0",
     "webpack-obfuscator": "^0.18.0",
     "zxcvbn": "^4.4.2"
   },

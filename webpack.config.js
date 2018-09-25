@@ -59,9 +59,9 @@ Encore
     .addEntry('account/app', './private/account/js/app.js')
     .addStyleEntry('account/style', './private/account/scss/app.scss')
 
-    // bulma
-    .addEntry('bulma/app', './private/bulma/app.js')
-    .addStyleEntry('bulma/style', './private/bulma/app.scss')
+    // modern
+    .addEntry('modern/app', './private/modern/app.js')
+    .addStyleEntry('modern/style', './private/modern/app.scss')
 
     .addPlugin(new CopyWebpackPlugin([
         //{ from: `./private/img/**`, to: 'img', flatten: true },

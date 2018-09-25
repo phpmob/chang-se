@@ -35,6 +35,10 @@ services:
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
 
+    Chang\UI\Twig\:
+        resource: '../UI/Twig'
+        tags: ['twig.extension']
+
     #Chang\Standard\Menu\:
     #    resource: '../src/Menu'
     #    tags: ['kernel.event_subscriber']

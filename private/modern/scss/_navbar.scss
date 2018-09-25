@@ -1,0 +1,40 @@
+.navbar {
+  margin-left: $nav-top-margin;
+  padding: 0 $navbar-padding-x 0 0;
+
+  @include media-breakpoint-down(sm) {
+    margin-left: $nav-top-margin - 20px;
+  }
+
+  .nav-item {
+    &.has-notified {
+      position: relative;
+
+      &:before {
+        position: absolute;
+        top: .2rem;
+        left: 1.2rem;
+        content: "";
+        display: block;
+        width: 6px;
+        height: 6px;
+        border-radius: 3px;
+        background-color: $warning;
+        pointer-events: none;
+        user-select: none;
+      }
+    }
+
+    .nav-link {
+      color: $gray-600;
+
+      &:hover {
+        background: $gray-200;
+      }
+
+      i + span {
+        padding-left: .2rem;
+      }
+    }
+  }
+}
