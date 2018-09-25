@@ -21,11 +21,11 @@
                 <div class="pane-title">
                     <div class="text">Account Settings</div>
                 </div>
-                <nav class="nav flex-column">
-                    <a class="nav-link" href="{{ path('cse_web_test') }}" data-modal="Update Profile">
-                        {{ ui_mt_icon('vpn_key') }} Update Profile
+                <nav class="list-group list-group-flush">
+                    <a class="list-group-item list-group-item-action" href="{{ path('cse_web_test') }}" data-modal="Update Profile">
+                        {{ ui_icon('far fa-user') }} Update Profile
                     </a>
-                    <a class="nav-link">{{ ui_mt_icon('vpn_key') }} Change Password</a>
+                    <a class="list-group-item list-group-item-action">{{ ui_icon('fas fa-key') }} Change Password</a>
                 </nav>
             </div>
             <div role="tabpanel" id="reminders" class="tab-pane">
@@ -169,11 +169,11 @@
 
     <footer class="aside-footer">
         <a href="/"
-           data-confirmation="You are going to logout. Are you sure?"
-           data-confirmation-theme="supervan"
-           data-confirmation-icon="fas fa-sign-out-alt"
+           data-confirm="You are going to logout. Are you sure?"
+           data-confirm-icon="fas fa-sign-out-alt"
+           data-confirm-theme="supervan"
         >
-            <i class="material-icons">arrow_forward</i> {{ 'chang.ui.logout'|trans }}
+            {{ ui_mt_icon('arrow_forward') }} {{ 'chang.ui.logout'|trans }}
         </a>
     </footer>
 </aside>

@@ -1,6 +1,6 @@
 .menu-child {
   background: $secondary;
-  border-right: 1px solid $gray-200;
+  border-right: 1px solid $gray-700;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -10,6 +10,7 @@
   transition: all .3s;
   z-index: 999;
   left: $main-menu-width;
+  @include box-shadow(1px 0 5px 0 rgba($black, 0.15));
 
   @include media-breakpoint-down(sm) {
     left: $main-menu-width - 20px;

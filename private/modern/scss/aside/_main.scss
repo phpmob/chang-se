@@ -17,22 +17,23 @@
   backface-visibility: hidden;
   perspective: 1000;
   will-change: transform;
+  @include box-shadow(0 0 5px 1px rgba($black, 0.1));
 
   &.active {
     right: 0;
-    box-shadow: 5px 0 13px 3px rgba(0, 0, 0, 0.1);
+
     &.is-left {
       left: 0;
     }
   }
 
+  i {
+    margin-right: .5rem;
+  }
+
   .nav-link {
     display: flex;
     align-items: center;
-
-    i {
-      margin-right: .3rem;
-    }
   }
 
   .aside-header {
@@ -68,31 +69,6 @@
     flex: 1 1 0;
     overflow: auto;
 
-    .pane-title {
-      display: flex;
-      align-items: center;
-      margin-bottom: 1rem;
-      color: $gray-500;
-      font-size: $h4-font-size;
-
-      i {
-        cursor: pointer;
-
-        &:hover {
-          color: $secondary;
-        }
-      }
-    }
-
-    .tab-content {
-      padding: 0 1rem;
-    }
-
-    .tab-pane {
-      animation-name: translateLeft;
-      animation-duration: 0.5s;
-    }
-
     > .nav {
       margin-bottom: 1rem;
 
@@ -116,6 +92,37 @@
           border-bottom: 2px solid $secondary;
         }
       }
+    }
+
+    .pane-title {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+      color: $gray-500;
+      font-size: $h4-font-size;
+
+      i {
+        cursor: pointer;
+
+        &:hover {
+          color: $secondary;
+        }
+      }
+    }
+
+    .list-group-item {
+      &:first-child {
+        border-top: none;
+      }
+    }
+
+    .tab-content {
+      padding: 0 1rem;
+    }
+
+    .tab-pane {
+      animation-name: translateLeft;
+      animation-duration: 0.5s;
     }
   }
 

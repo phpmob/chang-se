@@ -14,7 +14,18 @@ class Icon extends \Twig_Extension
         return [
             new \Twig_SimpleFunction('ui_mt_icon', [$this, 'getMaterialIcon'], ['is_safe' => ['html']]),
             new \Twig_SimpleFunction('ui_sl_icon', [$this, 'getSimpleLineIcon'], ['is_safe' => ['html']]),
+            new \Twig_SimpleFunction('ui_icon', [$this, 'getIcon'], ['is_safe' => ['html']]),
         ];
+    }
+
+    /**
+     * @param string $key
+     *
+     * @return string
+     */
+    public function getIcon(string $key): string
+    {
+        return sprintf('<i class="%s"></i>', $key);
     }
 
     /**

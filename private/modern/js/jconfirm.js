@@ -1,12 +1,15 @@
-$(document).on('click', '[data-confirmation]', function (e) {
+$(document).on('click', '[data-confirmation],[data-confirm]', function (e) {
     e.preventDefault();
 
     const $el = $(this);
+    const getData = (key) => {
+        return $el.data(`confirmation-${key}`) || $el.data(`confirm-${key}`);
+    };
 
     let btnClass = 'btn-green';
     let icon = 'far fa-question-circle';
 
-    switch ($el.data('confirmation-type')) {
+    switch (getData('type')) {
         case 'danger':
             btnClass = 'btn-red';
             icon = 'fas fa-exclamation-triangle';
@@ -27,10 +30,10 @@ $(document).on('click', '[data-confirmation]', function (e) {
     }
 
     $.confirm({
-        icon: $el.data('confirmation-icon') || icon,
-        theme: $el.data('confirmation-theme') || 'modern',
-        title: $el.data('confirmation-title') || 'Confirmation',
-        content: $el.data('confirmation') || 'Do you want to continue?',
+        icon: getData('icon') || icon,
+        theme: getData('theme') || 'modern',
+        title: getData('title') || 'Confirmation',
+        content: $el.data('confirmation') || $el.data('confirm') || 'Do you want to continue?',
         buttons: {
             confirm: {
                 text: 'Yes, I do!',
