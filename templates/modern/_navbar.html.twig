@@ -15,14 +15,24 @@
 </nav>
 #}
 <nav class="navbar navbar-expand-lg">
-    <div class="navbar-collapse">
+    <div class="collapse navbar-collapse">
         {% include 'modern/_breadcrumb.html.twig' %}
     </div>
-    <div class="navbar-nav ml-auto">
-        <div class="nav-item has-notified">
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="#">
+                {{ ui_icon('fas fa-th') }}
+            </a>
+        </li>
+        {#<li class="nav-item has-notified">
+            <a class="nav-link" href="#" data-tgg="aside">
+                {{ ui_icon('far fa-envelope-open') }}
+            </a>
+        </li>#}
+        <li class="nav-item has-notified">
             <a class="nav-link" href="#" data-tgg="aside">
                 <i class="sl-ico-user"></i> <span>Liverbool</span>
             </a>
-        </div>
-    </div>
+        </li>
+    </ul>
 </nav>

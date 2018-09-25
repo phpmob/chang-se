@@ -4,6 +4,12 @@
 
   @include media-breakpoint-down(sm) {
     margin-left: $nav-top-margin - 20px;
+    padding: 0;
+
+    .navbar-nav {
+      flex-direction: row;
+      margin-top: .5rem;
+    }
   }
 
   .nav-item {
@@ -13,7 +19,7 @@
       &:before {
         position: absolute;
         top: .2rem;
-        left: 1.2rem;
+        left: 1.6rem;
         content: "";
         display: block;
         width: 6px;
@@ -27,6 +33,7 @@
 
     .nav-link {
       color: $gray-600;
+      padding: $nav-link-padding-y $nav-link-padding-x;
 
       &:hover {
         background: $gray-200;
