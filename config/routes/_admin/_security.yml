@@ -4,7 +4,7 @@ cse_admin_login:
     defaults:
         _controller: chang.controller.security:loginAction
         _sylius:
-            template: "modern/security/login.html.twig"
+            template: "@ui/modern/security/login.html.twig"
             permission: true
             logged_in_route: ~
             login_check_route: chang_admin_login_check
