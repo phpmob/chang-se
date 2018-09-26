@@ -38,45 +38,45 @@
   &.btn-blue {
     border-color: $cyan;
     background-color: $cyan;
-    color: #FFF;
+    color: $white;
     text-shadow: none;
     transition: background .2s;
     &:hover {
       background-color: darken($cyan, 10%);
-      color: #FFF;
+      color: $white;
     }
   }
   &.btn-green {
     border-color: $green;
     background-color: $green;
-    color: #FFF;
+    color: $white;
     text-shadow: none;
     transition: background .2s;
     &:hover {
       background-color: darken($green, 10%);
-      color: #FFF;
+      color: $white;
     }
   }
   &.btn-red {
     border-color: $red;
     background-color: $red;
-    color: #FFF;
+    color: $white;
     text-shadow: none;
     transition: background .2s;
     &:hover {
       background-color: darken($red, 10%);
-      color: #FFF;
+      color: $white;
     }
   }
   &.btn-orange {
     border-color: $orange;
     background-color: $orange;
-    color: #FFF;
+    color: $white;
     text-shadow: none;
     transition: background .2s;
     &:hover {
       background-color: darken($orange, 10%);
-      color: #FFF;
+      color: $white;
     }
   }
   &.btn-default {
@@ -92,23 +92,23 @@
   &.btn-purple {
     border-color: $purple;
     background-color: $purple;
-    color: #FFF;
+    color: $white;
     text-shadow: none;
     transition: background .2s;
     &:hover {
       background-color: darken($purple, 10%);
-      color: #FFF;
+      color: $white;
     }
   }
   &.btn-dark {
     border-color: $gray-600;
     background-color: $gray-600;
-    color: #FFF;
+    color: $white;
     text-shadow: none;
     transition: background .2s;
     &:hover {
       background-color: darken($gray-600, 10%);
-      color: #FFF;
+      color: $white;
     }
   }
 }

@@ -6,7 +6,7 @@ require('bootstrap');
 
 require('chang/js/data-ajax-form');
 
-require('./js/jconfirm');
+require('./js/confirm');
 require('./js/menu/stack');
 require('./js/modal');
 require('./js/modal-href');

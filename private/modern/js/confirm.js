@@ -1,3 +1,5 @@
+const ajaxForm = require('chang/js/ajax-form');
+
 $(document).on('click', '[data-confirmation],[data-confirm]', function (e) {
     e.preventDefault();
 
@@ -43,7 +45,6 @@ $(document).on('click', '[data-confirmation],[data-confirm]', function (e) {
                     $el.addClass('disabled');
 
                     if (isForm) {
-                        const ajaxForm = require('chang/js/ajax-form');
                         ajaxForm.submit($el.get(0), e);
 
                         return;
