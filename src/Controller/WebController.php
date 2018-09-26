@@ -12,7 +12,7 @@ class WebController extends Controller
 {
     public function indexAction(): Response
     {
-        return $this->render('modern/index.html.twig');
+        return $this->render('web/index.html.twig');
     }
 
     public function testAction(Request $request): Response

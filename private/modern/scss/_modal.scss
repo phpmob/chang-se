@@ -55,23 +55,10 @@
       position: fixed;
       background: linear-gradient(45deg, $secondary 0%, lighten($secondary, 20%) 100%);
       background-color: $secondary;
-      width: 1000px;
-      height: 1000px;
-      border-radius: 10000px;
-      transition: all 0.5s;
-      transform: scale(0);
-      margin-left: auto;
-      margin-right: auto;
       left: 0;
       right: 0;
       top: 0;
       bottom: 0;
-
-      .modal-open & {
-        &.scaleInCircle {
-          transform: scale(7);
-        }
-      }
     }
 
     .modal-content {

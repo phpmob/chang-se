@@ -53,7 +53,8 @@ Encore
     .addEntry('ready', './private/ready.js')
     .addEntry('msg', `${Chang.messenger}/js/msg.js`)
     .addStyleEntry('flatpickr', './node_modules/flatpickr/dist/flatpickr.css')
-    .addStyleEntry('jquery-confirm', './node_modules/jquery-confirm/css/jquery-confirm.css')
+    .addStyleEntry('jquery-confirm', './node_modules/jquery-confirm/dist/jquery-confirm.min.css')
+    .addStyleEntry('animate', './node_modules/animate.css/animate.min.css')
 
     // account
     .addEntry('account/app', './private/account/js/app.js')

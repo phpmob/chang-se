@@ -1,51 +1,38 @@
 {% extends 'modern/layout.html.twig' %}
+{% form_theme form '@chang/form/theme.html.twig' %}
 
 {% block body %}
-    <section class="hero is-fullheight is-light-grey is-bold">
-        <div class="hero-body">
-            <div class="container">
-                <div class="columns is-vcentered">
-                    <div class="column is-4 is-offset-4">
-                        <form action="{{ path('cse_admin_login_check') }}" method="post">
-                            <div class="flex-card is-light-raised light-bordered card-overflow">
-                                <div class="card-body">
-                                    {% if last_error %}
-                                        <div class="notification is-danger">
-                                            {{ last_error.messageKey|trans(last_error.messageData, 'security') }}
-                                        </div>
-                                    {% endif %}
-                                    <div class="field pb-10">
-                                        <div class="control has-icons-right">
-                                            <input class="input is-large" type="text" placeholder="Username">
-                                            <span class="icon is-medium is-right">
-                                                    <i class="sl-ico-user"></i>
-                                                </span>
-                                        </div>
-                                    </div>
-                                    <div class="field pb-10">
-                                        <div class="control has-icons-right">
-                                            <input class="input is-large" type="text" placeholder="Password">
-                                            <span class="icon is-medium is-right">
-                                                    <i class="sl-ico-lock"></i>
-                                                </span>
-                                        </div>
-                                    </div>
-                                    <div class="pt-10 pb-10">
-                                        <button class="button button-cta btn-align primary-btn is-fullwidth rounded no-lh">
-                                            Login
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                        <p class="has-text-centered">
-                            <a class="no-account" href="#">Dont have an account?</a>
-                            |
-                            <a class="forgot" href="#">Forgot password?</a>
-                        </p>
+    <div class="container full-screen centered">
+        <main class="login">
+            <header>
+                <span>{{ 'Login' }}</span>
+            </header>
+            <div class="card">
+                <form class="card-body" method="post" action="{{ path('cse_admin_login_check') }}">
+                    {% if last_error %}
+                        <div class="alert alert-danger">
+                            {{ last_error.messageKey|trans(last_error.messageData, 'security') }}
+                        </div>
+                    {% endif %}
+
+                    {{ form_row(form._username) }}
+                    {{ form_row(form._password) }}
+                    {{ form_row(form._remember_me) }}
+
+                    <div class="form-group">
+                        <button class="btn btn-lg btn-primary btn-block" type="submit">
+                            {{ 'chang.form.login.submit'|trans }}
+                        </button>
                     </div>
-                </div>
+
+                    {{ form_row(form._remember_me) }}
+                    <input type="hidden" name="{{ csrf_parameter }}" value="{{ csrf_token(csrf_token_id) }}">
+                </form>
             </div>
-        </div>
-    </section>
+            <footer class="d-flex">
+                <a href="#">{{ ui_sl_icon('user-follow') }} {{ 'Create new account' }}</a>
+                <a class="ml-auto" href="#">{{ ui_sl_icon('key') }} {{ 'Forgot password?' }}</a>
+            </footer>
+        </main>
+    </div>
 {% endblock %}

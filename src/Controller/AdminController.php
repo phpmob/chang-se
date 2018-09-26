@@ -11,6 +11,6 @@ class AdminController extends Controller
 {
     public function indexAction(): Response
     {
-        return $this->render('bulma/index.html.twig');
+        return $this->render('modern/index.html.twig');
     }
 }

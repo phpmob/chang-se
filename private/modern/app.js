@@ -6,9 +6,10 @@ require('bootstrap');
 
 require('chang/js/data-ajax-form');
 
+require('./js/animated');
 require('./js/confirm');
 require('./js/menu/stack');
-require('./js/modal');
+require('./js/modal-close');
 require('./js/modal-href');
 require('./js/dismiss');
 require('./js/tabs');

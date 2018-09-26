@@ -8,6 +8,7 @@
     "build": "encore production"
   },
   "dependencies": {
+    "animate.css": "^3.7.0",
     "bootstrap": "^4.1.1",
     "flag-icon-css": "^3.0.0",
     "flatpickr": "^4.5.0",

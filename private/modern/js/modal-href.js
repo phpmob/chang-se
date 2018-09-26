@@ -15,9 +15,9 @@
         const $modal = $(`
             <div class="modal modal-hero">
                 <button class="modal-close"></button>
-                <div class="modal-background scaleInCircle"></div>
+                <div class="modal-background animated faster zoomIn"></div>
                 <div class="modal-dialog modal-dialog-centered ${modalCss} scaleIn">
-                    <div class="modal-content scaleIn">
+                    <div class="modal-content animated fast zoomIn">
                         ${title ? '<div class="modal-header"><h5 class="modal-title">' + title + '</h5></div>' : ''}
                         <div class="modal-body">
                             <div class="lds-loading">

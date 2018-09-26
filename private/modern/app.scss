@@ -4,7 +4,6 @@
 @import "~flag-icon-css/sass/flag-icon";
 @import "~simple-line-icons/scss/simple-line-icons";
 
-@import "scss/animations";
 @import "scss/aside/main";
 @import "scss/menu/main";
 @import "scss/breadcrumb";
@@ -14,9 +13,14 @@
 @import "scss/loading.io";
 @import "scss/navbar";
 @import "scss/switch";
+@import "scss/container";
+@import "scss/dropdown";
+
+@import "scss/component/login";
 
 html, body {
   background-color: $body-bg;
+  height: 100%;
 }
 
 button, a {
@@ -31,4 +35,9 @@ body.has-stack-menu {
       padding-left: $main-menu-width - 20px;
     }
   }
+}
+
+.animated {
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
 }
