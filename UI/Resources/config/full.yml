@@ -1,17 +1,3 @@
-framework:
-    translator:
-        paths:
-        - '%kernel.project_dir%/UI/Resources/translations'
-twig:
-    paths:
-        #'%kernel.project_dir%/templates/WebUser': ui # override, folder exists needed!
-        '%kernel.project_dir%/UI/Resources/views': ui
-
-services:
-    _defaults:
-        autowire: true
-        public: false
-
-    Chang\UI\Twig\:
-        resource: '../../Twig'
-        tags: ['twig.extension']
+imports:
+    - { resource: ./generic.yml }
+    - { resource: ./modern.yml }

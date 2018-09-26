@@ -3,7 +3,6 @@
 @import "~bootstrap/scss/bootstrap";
 @import "~flag-icon-css/sass/flag-icon";
 @import "~simple-line-icons/scss/simple-line-icons";
-
 @import "scss/aside/main";
 @import "scss/menu/main";
 @import "scss/breadcrumb";
@@ -15,8 +14,8 @@
 @import "scss/switch";
 @import "scss/container";
 @import "scss/dropdown";
-
-@import "scss/component/login";
+@import "scss/login";
+@import "scss/crud";
 
 html, body {
   background-color: $body-bg;
@@ -28,11 +27,12 @@ button, a {
 }
 
 body.has-stack-menu {
-  > .container {
-    padding-left: $main-menu-width;
+  > .container,
+  > .container-fluid {
+    padding-left: $main-menu-width + ($grid-gutter-width / 2);
 
     @include media-breakpoint-down(sm) {
-      padding-left: $main-menu-width - 20px;
+      padding-left: ($main-menu-width + ($grid-gutter-width / 2)) - 20px;
     }
   }
 }

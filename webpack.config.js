@@ -56,10 +56,6 @@ Encore
     .addStyleEntry('jquery-confirm', './node_modules/jquery-confirm/dist/jquery-confirm.min.css')
     .addStyleEntry('animate', './node_modules/animate.css/animate.min.css')
 
-    // account
-    .addEntry('account/app', './private/account/js/app.js')
-    .addStyleEntry('account/style', './private/account/scss/app.scss')
-
     // modern
     .addEntry('modern/app', './private/modern/app.js')
     .addStyleEntry('modern/style', './private/modern/app.scss')

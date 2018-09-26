@@ -1,2 +1,6 @@
-admin_security:
+_admin_security:
     resource: './_security.yml'
+
+_admin_users:
+    prefix: /admin-users
+    resource: './_admin_user.yml'

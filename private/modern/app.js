@@ -5,6 +5,7 @@ require('jquery-confirm');
 require('bootstrap');
 
 require('chang/js/data-ajax-form');
+require('chang/js/data-toggle-display');
 
 require('./js/animated');
 require('./js/confirm');

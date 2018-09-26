@@ -6,6 +6,7 @@
     {% include '@ui/modern/_navbar.html.twig' %}
     {% include '@ui/modern/aside/_main.html.twig' %}
 
-    <div class="container">
+    <div class="container-fluid">
+        {% block content %}{% endblock %}
     </div>
 {% endblock %}
