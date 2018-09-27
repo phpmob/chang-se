@@ -6,6 +6,7 @@ require('bootstrap');
 
 require('chang/js/data-ajax-form');
 require('chang/js/data-toggle-display');
+require('chang/js/data-form-filter');
 
 require('./js/animated');
 require('./js/confirm');

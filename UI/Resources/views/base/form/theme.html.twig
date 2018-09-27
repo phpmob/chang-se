@@ -218,3 +218,8 @@
     {%- endif -%}
     {{ parent() }}
 {% endblock %}
+
+{% block choice_widget_collapsed -%}
+    {%- set attr = attr|merge({class: (attr.class|default('') ~ ' custom-select')|trim}) -%}
+    {{- parent() -}}
+{%- endblock choice_widget_collapsed %}

@@ -12,6 +12,6 @@
 {%- endblock form_widget_simple %}
 
 {% block choice_widget_collapsed -%}
-    {%- set attr = attr|merge({class: (attr.class|default('') ~ ' form-control')|trim, size: 'auto'}) -%}
+    {%- set attr = attr|merge({class: (attr.class|default('') ~ ' custom-select')|trim, size: 'auto'}) -%}
     {{- parent() -}}
 {%- endblock choice_widget_collapsed %}
