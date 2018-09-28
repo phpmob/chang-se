@@ -6,6 +6,9 @@
 
         if ($mainMenu.length) {
             $('body').addClass('has-stack-menu');
+            $mainMenu.find('li').tooltip({
+                placement: 'right',
+            });
         }
     });
 
@@ -21,6 +24,8 @@
         const $mainMenu = $('.menu-main');
         const $childMenu = $('.menu-child');
         const childId = $me.data('menu-child');
+
+        $('.sidebar-title').html($me.attr('title') || $me.data('original-title'));
 
         $mainMenu.find(`[data-menu-child]`).removeClass('is-active');
         $childMenu.addClass('is-sidebar-translated');
