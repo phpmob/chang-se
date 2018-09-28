@@ -19,7 +19,7 @@ sylius_admin_user_create:
             template: '@ui/modern/crud/create.html.twig'
             vars:
                 templates:
-                    form: '@Lotto/admin/user/_adminForm.html.twig'
+                    form: 'admin/user/_adminForm.html.twig'
 
 sylius_admin_user_update:
     path: /{id}/update
@@ -31,7 +31,7 @@ sylius_admin_user_update:
             template: '@ui/modern/crud/update.html.twig'
             vars:
                 templates:
-                    form: '@Lotto/admin/user/_adminForm.html.twig'
+                    form: 'admin/user/_adminForm.html.twig'
 
 sylius_admin_user_delete:
     path: /{id}/delete

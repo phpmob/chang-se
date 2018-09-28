@@ -11,7 +11,7 @@
   top: 0;
   bottom: 0;
   right: -310px;
-  z-index: 999;
+  z-index: $zindex-fixed + 1;
   transform: translateZ(0);
   transition: 0.3s ease;
   backface-visibility: hidden;

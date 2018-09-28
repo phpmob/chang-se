@@ -145,7 +145,7 @@
         <input type="checkbox" {{ block('widget_attributes') }}{% if value is defined %} value="{{ value }}"{% endif %}{% if checked %} checked="checked"{% endif %} />
     {%- endset -%}
     {% if switch is defined %}
-        <span class="switch{{ switch is same as(true) ? '' : '--' ~ switch }}">
+        <span class="switch{{ switch is same as(true) ? '' : ' switch--' ~ switch }}">
             {{- form_label(form, null, { widget: widget }) -}}
         </span>
     {% else %}

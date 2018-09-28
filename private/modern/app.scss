@@ -12,8 +12,10 @@
 @import "scss/loading.io";
 @import "scss/navbar";
 @import "scss/switch";
+@import "scss/switcher";
 @import "scss/container";
 @import "scss/dropdown";
+@import "scss/form";
 @import "scss/form-filter";
 @import "scss/login";
 @import "scss/crud";
@@ -21,6 +23,11 @@
 html, body {
   background-color: $body-bg;
   height: 100%;
+
+  > .container,
+  > .container-fluid {
+    margin-top: 42px;
+  }
 }
 
 button, a {

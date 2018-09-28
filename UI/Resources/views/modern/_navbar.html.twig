@@ -1,44 +1,21 @@
-{#
-<nav class="navbar">
-    <div class="navbar-menu">
-        <div class="navbar-start">
-            {% include 'modern/_breadcrumb.html.twig' %}
-        </div>
+{% set quickMenu = knp_menu_get(ctx_page.get('menu.quick', 'quick')) %}
+{% if quickMenu|length %}
+    <li class="nav-item dropdown header-nav-dropdown">
+        <a class="nav-link" href="#" data-toggle="dropdown">
+            {{ ui_icon('fas fa-th') }}
+        </a>
+        <div class="dropdown-arrow"></div>
+        {{ knp_menu_render(quickMenu, { template: '@ui/modern/menu/quick.html.twig' }) }}
+    </li>
+{% endif %}
 
-        <div class="navbar-end">
-            <a class="navbar-user" href="#" data-tgg="aside">
-                <i class="sl-ico-user"><span class="badge-circle gelatine"></span></i>
-                <span>Liverbool</span>
-            </a>
-        </div>
-    </div>
-</nav>
-#}
-<nav class="navbar navbar-expand-lg">
-    <div class="collapse navbar-collapse">
-        {% include '@ui/modern/_breadcrumb.html.twig' %}
-    </div>
-    <ul class="navbar-nav ml-auto">
-        {% set quickMenu = knp_menu_get(ctx_page.get('menu.quick', 'quick')) %}
-        {% if quickMenu|length %}
-            <li class="nav-item dropdown header-nav-dropdown">
-                <a class="nav-link" href="#" data-toggle="dropdown">
-                    {{ ui_icon('fas fa-th') }}
-                </a>
-                <div class="dropdown-arrow"></div>
-                {{ knp_menu_render(quickMenu, { template: '@ui/modern/menu/quick.html.twig' }) }}
-            </li>
-        {% endif %}
-
-        {#<li class="nav-item has-notified">
-            <a class="nav-link" href="#" data-tgg="aside">
-                {{ ui_icon('far fa-envelope-open') }}
-            </a>
-        </li>#}
-        <li class="nav-item has-notified">
-            <a class="nav-link" href="#" data-tgg="aside">
-                {{ ui_sl_icon('user') }} <span>{{ app.user.displayName }}</span>
-            </a>
-        </li>
-    </ul>
-</nav>
+{#<li class="nav-item has-notified">
+    <a class="nav-link" href="#" data-tgg="aside">
+        {{ ui_icon('far fa-envelope-open') }}
+    </a>
+</li>#}
+<li class="nav-item has-notified">
+    <a class="nav-link" href="#" data-tgg="aside">
+        {{ ui_sl_icon('user') }} <span>{{ app.user.displayName }}</span>
+    </a>
+</li>

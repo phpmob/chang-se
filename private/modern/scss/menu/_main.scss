@@ -10,7 +10,7 @@
   left: 0;
   overflow: visible;
   transition: transform 0.3s;
-  z-index: 1000;
+  z-index: $zindex-fixed + 2;
   width: $main-menu-width;
 
   @include media-breakpoint-down(sm) {

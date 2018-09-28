@@ -10,7 +10,7 @@
   width: 250px;
   overflow: hidden;
   transition: all .3s;
-  z-index: 999;
+  z-index: $zindex-fixed + 1;
   left: $main-menu-width;
   @include box-shadow(1px 0 5px 0 rgba($black, 0.15));
 

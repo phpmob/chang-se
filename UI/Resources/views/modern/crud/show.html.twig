@@ -3,7 +3,7 @@
 {% do ctx_page.set('page.entry', ctx_page.get('page.entry', 'show')) %}
 {% do ctx_page.set('page.icon', ctx_page.get('page.icon', 'fas fa-file-alt')) %}
 
-{% block content %}
+{% block crud_body %}
     {% if configuration.vars.templates.show is defined %}
         {% include configuration.vars.templates.show %}
     {% else %}
@@ -13,7 +13,7 @@
     {% endif %}
 {% endblock %}
 
-{% block page_toolbar %}
+{% block crud_header_action %}
     <a class="btn btn-outline-warning" href="{{ backUrl }}">
         <i class="fas fa-angle-left"></i> {{ 'chang.ui.back'|trans }}
     </a>

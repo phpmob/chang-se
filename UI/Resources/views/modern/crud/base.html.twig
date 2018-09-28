@@ -18,32 +18,37 @@
 {% endif %}
 
 {% set icon = ctx_page.get('page.icon') %}
+{% set entry = ctx_page.get('page.entry') %}
 
 {% do ctx_page.set({
     'site.url': ctx_page.get('site.url', '/'),
-    'seo.title': headline,
+    'seo.title': headline|trans,
 }) %}
 
-{% block breadcrumb %}{{ include('@ui/modern/crud/_breadcrumb.html.twig') }}{% endblock %}
+{% block breadcrumb %}
+    {{ include('@ui/modern/crud/_breadcrumb.html.twig') }}
+{% endblock %}
 
-{% block page_title_bar %}
-    <div class="card">
-        <div class="card-body">
-            <div class="media align-items-center">
-                {% block paage_icon %}
-                    <div class="tile tile-circle tile-lg mr-3">
-                        <i class="{{ icon|default('fas fa-file') }}"></i>
-                    </div>
-                {% endblock %}
-                <div class="media-body">
-                    {% block page_header %}
-                        <h5 class="text-truncate mb-0">
-                            {{ headline|raw }}
-                        </h5>
+{% block content %}
+    <div class="crud crud-{{ entry }}">
+        <header class="crud-header">
+            {% block crud_header %}
+                <div class="crud-title m-0">
+                    {% block crud_header_title %}
+                        <i class="{{ icon }}"></i>
+                        <div class="crud-title--text">
+                            <h5>{{ headline|trans|raw }}</h5>
+                            <h6>{{ description|trans|raw }}</h6>
+                        </div>
                     {% endblock %}
                 </div>
-                <div class="ml-auto">{% block page_toolbar %}{% endblock %}</div>
-            </div>
+                <div class="ml-auto">
+                    {% block crud_header_action %}{% endblock %}
+                </div>
+            {% endblock %}
+        </header>
+        <div class="crud-body">
+            {% block crud_body %}{% endblock %}
         </div>
     </div>
 {% endblock %}
