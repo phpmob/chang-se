@@ -57,7 +57,7 @@
     }
   }
   .sidebar-menu li a {
-    span {
+    i {
       margin-right: 20px;
       color: $white;
     }
@@ -87,7 +87,7 @@
           a {
             background-color: darken($secondary, 20%);
             padding: 12px 25px 12px 62px;
-            span {
+            i {
               margin-left: auto;
               margin-right: 10px;
               &:after {
@@ -111,7 +111,8 @@
     }
     position: relative;
   }
-  .have-children span::after {
+  // menu array
+  .have-children i::after {
     position: absolute;
     top: 21px;
     right: 30px;
@@ -119,7 +120,7 @@
     color: $white;
     transition: all 0.5s;
   }
-  li.active.have-children span::after {
+  li.active.have-children i::after {
     transform: rotate(90deg);
   }
   .sidebar-menu .have-children > ul {

@@ -6,20 +6,6 @@
                 {{ ui_mt_icon('flight_takeoff') }}
             </a>
         </li>
-        <li data-menu-child="dashboard-menu" title="{{ 'Dashboard' }}">
-            <i class="sl-ico-speedometer"></i>
-        </li>
-        <li data-menu-child="documents-menu" title="{{ 'Documents' }}">
-            <i class="sl-ico-docs"></i>
-        </li>
-        <li data-menu-child="business-menu" title="{{ 'Business' }}">
-            <i class="sl-ico-briefcase"></i>
-        </li>
-        <li data-menu-child="misc-menu" title="{{ 'Misc' }}">
-            <i class="sl-ico-graph"></i>
-        </li>
-        <li data-menu-child="settings-menu" title="{{ 'Settings' }}">
-            <i class="sl-ico-settings"></i>
-        </li>
+        {{ knp_menu_render('main', { template: '@ui/modern/menu/main.html.twig' }) }}
     </ul>
 </nav>

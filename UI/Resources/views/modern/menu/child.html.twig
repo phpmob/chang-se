@@ -1,0 +1,22 @@
+{% for child in item %}
+    <ul data-menu="{{ child.name }}" class="sidebar-menu animated preFadeInRIght fadeInRight">
+        {% for sub in child %}
+            {% set icon = sub.extras.icon|default('sl-ico-folder') %}
+            <li class="have-children">
+                <a class="parent-link" href="{{ sub.uri|default('#') }}">
+                    {{ ui_icon(icon) }} {{ sub.label|trans }}
+                </a>
+                {% if sub|length %}
+                    <ul>
+                        {% for menu in sub %}
+                            <li>
+                                <a href="{{ menu.uri }}">{{ menu.label|trans }}</a>
+                                {% if menu.extras.icon|default %}{{ ui_icon(menu.extras.icon) }}{% endif %}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+{% endfor %}

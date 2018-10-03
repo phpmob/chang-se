@@ -25,6 +25,10 @@ class Icon extends \Twig_Extension
      */
     public function getIcon(string $key): string
     {
+        if (preg_match('/^:/', $key)) {
+            return $this->getMaterialIcon(str_replace(':', '', $key));
+        }
+
         return sprintf('<i class="%s"></i>', $key);
     }
 

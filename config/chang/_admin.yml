@@ -44,3 +44,26 @@ parameters:
                     label: chang.ui.change_password
                     route: cse_account_change_password
                     icon: fas fa-key
+            main:
+                dashboard:
+                    label: Dashboard
+                    icon: sl-ico-speedometer
+                    child:
+                        dashboard:
+                            label: Dashboard
+                            icon: ':dashboard'
+                            child:
+                                test:
+                                    label: Test
+                documents:
+                    label: Documents
+                    icon: sl-ico-docs
+                business:
+                    label: Business
+                    icon: sl-ico-briefcase
+                misc:
+                    label: Misc
+                    icon: sl-ico-graph
+                settings:
+                    label: Settings
+                    icon: sl-ico-settings

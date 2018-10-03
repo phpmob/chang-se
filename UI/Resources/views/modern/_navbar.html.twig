@@ -1,4 +1,4 @@
-{% set quickMenu = knp_menu_get(ctx_page.get('menu.quick', 'quick')) %}
+{% set quickMenu = knp_menu_get('quick') %}
 {% if quickMenu|length %}
     <li class="nav-item dropdown header-nav-dropdown">
         <a class="nav-link" href="#" data-toggle="dropdown">
