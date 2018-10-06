@@ -4837,12 +4837,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpmob/chang.git",
-                "reference": "ef327655e4dec4cc4af0cd57d671b1c9b296bc1c"
+                "reference": "520d7d1d91fdd0a05e9934b23078d357712477ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpmob/chang/zipball/ef327655e4dec4cc4af0cd57d671b1c9b296bc1c",
-                "reference": "ef327655e4dec4cc4af0cd57d671b1c9b296bc1c",
+                "url": "https://api.github.com/repos/phpmob/chang/zipball/520d7d1d91fdd0a05e9934b23078d357712477ad",
+                "reference": "520d7d1d91fdd0a05e9934b23078d357712477ad",
                 "shasum": ""
             },
             "require": {
@@ -4902,7 +4902,7 @@
                 "source": "https://github.com/phpmob/chang/tree/master",
                 "issues": "https://github.com/phpmob/chang/issues"
             },
-            "time": "2018-10-03T11:12:35+00:00"
+            "time": "2018-10-06T17:40:02+00:00"
         },
         {
             "name": "phpmob/media-bundle",

@@ -55,6 +55,10 @@ parameters:
                             child:
                                 test:
                                     label: Test
+                        example:
+                            label: Example
+                            icon: ':dashboard'
+                            uri: /test
                 documents:
                     label: Documents
                     icon: sl-ico-docs
