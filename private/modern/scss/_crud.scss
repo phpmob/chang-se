@@ -93,8 +93,12 @@
   }
 
   .crud-body.has-aside {
-    display: flex;
     padding: 0;
+    display: flex;
+
+    @include media-breakpoint-down(sm) {
+      display: block;
+    }
 
     .crud-content {
       flex: 1 100%;

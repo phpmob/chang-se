@@ -43,6 +43,10 @@
       .crud-header {
         margin: 0;
         padding: 1rem 2rem;
+
+        @include media-breakpoint-down(sm) {
+          padding: .5rem;
+        }
       }
 
       .crud-body {
