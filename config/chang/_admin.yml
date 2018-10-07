@@ -34,8 +34,10 @@ parameters:
             account:
                 profile:
                     label: chang.ui.profile
-                    route: cse_account_profile_update
+                    route: cse_web_test
                     icon: far fa-user
+                    linkAttributes:
+                        data-modal: chang.ui.save|trans
                 account:
                     label: chang.ui.account
                     route: cse_account_account_update
