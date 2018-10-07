@@ -24,7 +24,6 @@
     "selectize": "^0.12.4",
     "simple-line-icons": "^2.4.1",
     "socket.io-client": "^2.1.1",
-    "stacked-menu": "https://gitlab.com/bent10/stacked-menu.git",
     "webpack-obfuscator": "^0.18.0",
     "zxcvbn": "^4.4.2"
   },

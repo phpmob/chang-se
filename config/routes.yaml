@@ -1,12 +1,3 @@
-cse_account_index:
-    path: /account
-    defaults:
-        _controller: Chang\Standard\Controller\AccountController::indexAction
-
-_account:
-    prefix: /account
-    resource: 'routes/_account/main.yml'
-
 cse_admin_index:
     path: /staff
     defaults:

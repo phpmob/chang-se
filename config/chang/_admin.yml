@@ -1,7 +1,8 @@
 parameters:
     chang_page_context_admin:
+        layout: 'admin/index.html.twig'
         site:
-            url: /
+            url: /staff
             name: Chang SE
             logo: /build/img/logo-php.png
             logo_square: /build/img/logo-square.png

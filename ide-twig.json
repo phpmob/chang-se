@@ -10,7 +10,7 @@
     },
     {
       "namespace": "ui",
-      "path": "UI/Resources/views"
+      "path": "vendor/phpmob/chang/src/UI/Resources/views"
     }
   ]
 }
