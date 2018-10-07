@@ -2,12 +2,14 @@ const Encore = require('@symfony/webpack-encore');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const path = require('path');
 const Chang = {
+    ui: path.resolve(__dirname, 'vendor/phpmob/chang/src/UI/Resources/private'),
     base: path.resolve(__dirname, 'vendor/phpmob/chang/src/Application/Resources/private'),
     messenger: path.resolve(__dirname, 'vendor/phpmob/chang/src/Messenger/Resources/private'),
 };
 
 Encore
     .addAliases({
+        'ui': Chang.ui,
         'chang': Chang.base,
     })
     // the project directory where compiled assets will be stored
@@ -26,6 +28,8 @@ Encore
         options.importer = function (url, prev) {
             if (url.indexOf('@chang') === 0) {
                 url = `${Chang.base}/${url}`.replace('@chang', '');
+            } else if (url.indexOf('@ui') === 0) {
+                url = `${Chang.ui}/${url}`.replace('@ui', '');
             } else if (url.indexOf('@') === 0) {
                 const nodeModulePath = `./node_modules/${url}`;
                 url = require('path').resolve(nodeModulePath)
@@ -48,20 +52,20 @@ Encore
         }
     )
 
-    .addEntry('pace', './private/pace.js')
-    .addEntry('pws', './private/zxcvbn.js')
-    .addEntry('ready', './private/ready.js')
+    .addEntry('pace', `${Chang.ui}/pace.js`)
+    .addEntry('pws', `${Chang.ui}/zxcvbn.js`)
+    .addEntry('ready', `${Chang.ui}/ready.js`)
     .addEntry('msg', `${Chang.messenger}/js/msg.js`)
     .addStyleEntry('flatpickr', './node_modules/flatpickr/dist/flatpickr.css')
-    .addStyleEntry('jquery-confirm', './node_modules/jquery-confirm/css/jquery-confirm.css')
+    .addStyleEntry('confirm', './node_modules/jquery-confirm/dist/jquery-confirm.min.css')
+    .addStyleEntry('animate', './node_modules/animate.css/animate.min.css')
 
-    // account
-    .addEntry('account/app', './private/account/js/app.js')
-    .addStyleEntry('account/style', './private/account/scss/app.scss')
+    // admin
+    .addEntry('admin/app', './private/admin/app.js')
+    .addStyleEntry('admin/style', './private/admin/app.scss')
 
     .addPlugin(new CopyWebpackPlugin([
-        { from: `./private/img/**`, to: 'img', flatten: true },
-        { from: `${Chang.base}/img/**`, to: 'img', flatten: true },
+        { from: `${Chang.ui}/img/**`, to: 'img', flatten: true },
         { from: `${Chang.messenger}/web-push/**`, to: 'web-push', flatten: true },
         { from: `${Chang.messenger}/sounds/**`, to: 'sounds', flatten: true },
     ]))

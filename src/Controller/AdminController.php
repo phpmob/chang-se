@@ -7,10 +7,10 @@ namespace Chang\Standard\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 
-class AccountController extends Controller
+class AdminController extends Controller
 {
     public function indexAction(): Response
     {
-        return $this->render('account/index.html.twig');
+        return $this->render('admin/index.html.twig');
     }
 }
