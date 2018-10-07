@@ -12,6 +12,7 @@ require('chang/js/data-toggle-display');
 require('chang/js/data-form-filter');
 
 require('./js/animated');
+require('./js/crud');
 require('./js/menu/stack');
 require('./js/modal-close');
 require('./js/modal-href');

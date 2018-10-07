@@ -73,8 +73,7 @@
       @extend .justify-content-center;
     }
 
-    .card-body {
-      padding: 0;
+    .crud-body {
     }
 
     .card-footer {
@@ -90,6 +89,24 @@
           border-bottom-width: 1px;
         }
       }
+    }
+  }
+
+  .crud-body.has-aside {
+    display: flex;
+    padding: 0;
+
+    .crud-content {
+      flex: 1 100%;
+      padding: 2rem;
+    }
+
+    .crud-aside {
+      min-width: 300px;
+      padding: 1rem;
+      background: $gray-100;
+      //box-shadow: inset 5px 0 2px -5px $gray-500;
+      border-left: 1px solid $table-head-bg;
     }
   }
 }

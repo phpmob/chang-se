@@ -23,26 +23,10 @@
 html, body {
   background-color: $body-bg;
   height: 100%;
-
-  > .container,
-  > .container-fluid {
-    margin-top: 42px;
-  }
 }
 
 button, a {
   outline: none;
-}
-
-body.has-stack-menu {
-  > .container,
-  > .container-fluid {
-    padding-left: $main-menu-width + ($grid-gutter-width / 2);
-
-    @include media-breakpoint-down(sm) {
-      padding-left: ($main-menu-width + ($grid-gutter-width / 2)) - 20px;
-    }
-  }
 }
 
 .animated {

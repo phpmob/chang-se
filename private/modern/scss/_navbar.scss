@@ -1,10 +1,12 @@
-$navbar-bg: darken($body-bg, 1%);
+$navbar-bg: darken($body-bg, 3%);
+$navbar-buttom-border: darken($table-head-bg, 10%);
 
 .navbar {
   margin-left: $nav-top-margin;
   padding: 0 $navbar-padding-x 0 0;
+  border-bottom: 1px solid $navbar-buttom-border;
   background: $navbar-bg;
-  background: radial-gradient(ellipse at center, $navbar-bg 0%, $body-bg 100%);
+  //background: radial-gradient(ellipse at top, $navbar-bg 0%, $body-bg 100%);
 
   &-overflow {
     @include box-shadow(0 1px 1px 0 rgba($black, 0.1));
